@@ -1,5 +1,5 @@
 #include "monty.h"
-bus_t bus = {NULL, NULL, NULL, 0};
+
 /**
 * main - the interpreter fo the monty code
 * @argc: number of arguments
@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	ssize_t line_reader = 1;
 	stack_t *stack = NULL;
 	unsigned int counters = 0;
+	bus_t bus = {NULL, NULL, NULL, 0};
 
 	if (argc != 2)
 	{
