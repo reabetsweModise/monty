@@ -30,7 +30,8 @@ void read_file(FILE *fd)
 	char *buffer = NULL;
 	size_t buffer_length = 0;
 
-	for (line_number = 1; getline(&buffer, &buffer_length, fd) != -1; line_number++)
+	for (line_number = 1; getline(&buffer, &buffer_length, fd) != -1;
+			line_number++)
 	{
 		storage_format = parse_line(buffer, line_number, storage_format);
 	}
@@ -43,7 +44,8 @@ void read_file(FILE *fd)
  * which function to call
  * @buffer: lines from the file
  * @line_number: the line number
- * @storage_format:  storage storage_format. 0 Nodes will be entered as a stack.
+ * @storage_format:  storage storage_format.
+ * 0 Nodes will be entered as a stack.
  * 1 nodes will be entered as a queue.
  * Return: Returns 0 when opcode is stack. 1 when queue.
  */
@@ -74,7 +76,8 @@ int parse_line(char *buffer, int line_number, int storage_format)
  * find_func - finds the function opcode
  * @opcode: instruction
  * @value: argument of opcode
- * @storage_format:  storage storage_format. If 0 Nodes will be entered as a stack.
+ * @storage_format:  storage storage_format.
+ * If 0 Nodes will be entered as a stack.
  * @ln: line number if 1 nodes will be entered as a queue.
  * Return: returns void.
  */
@@ -105,7 +108,8 @@ void find_func(char *opcode, char *value, int ln, int storage_format)
 	if (opcode[0] == '#')
 		return;
 
-	for (opcode_flag = 1, loop_counter = 0; func_list[loop_counter].opcode != NULL; loop_counter++)
+	for (opcode_flag = 1, loop_counter = 0;
+			func_list[loop_counter].opcode != NULL; loop_counter++)
 	{
 		if (strcmp(opcode, func_list[loop_counter].opcode) == 0)
 		{
