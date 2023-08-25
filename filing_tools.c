@@ -28,9 +28,9 @@ void read_file(FILE *fd)
 {
 	int line_number, storage_format = 0;
 	char *buffer = NULL;
-	size_t buffer length = 0;
+	size_t buffer_length = 0;
 
-	for (line_number = 1; getline(&buffer, &buffer length, fd) != -1; line_number++)
+	for (line_number = 1; getline(&buffer, &buffer_length, fd) != -1; line_number++)
 	{
 		storage_format = parse_line(buffer, line_number, storage_format);
 	}
