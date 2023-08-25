@@ -1,11 +1,10 @@
 #include "monty.h"
 stack_t *head = NULL;
-
 /**
- * main - entry point
- * @argc: arguments count
- * @argv: list of arguments
- * Return: always 0
+ * main -this Fuction entry point
+ * @argc: Arguments count
+ * @argv: List of arguments
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -21,8 +20,8 @@ int main(int argc, char *argv[])
 }
 
 /**
- * create_node - Creates a stack_node.
- * @n: Number to go inside the stack_node.
+ * create_node -this Fuction creates a stack_node.
+ * @n: nmber to go inside the stack_node.
  * Return: Upon sucess a pointer to the stack_node. Otherwise NULL.
  */
 stack_t *create_node(int n)
@@ -39,7 +38,7 @@ stack_t *create_node(int n)
 }
 
 /**
- * free_nodes - Frees nodes in the stack.
+ * free_nodes -this Fuction Frees nodes in the stack.
  */
 void free_nodes(void)
 {
@@ -58,9 +57,9 @@ void free_nodes(void)
 
 
 /**
- * add_to_queue - Adds a stack_node to the queue.
- * @new_node: Pointer to the new stack_node.
- * @ln: line number of the opcode.
+ * add_to_queue -this Fuction adds a stack_node to the queue.
+ * @new_node: pointer to the new stack_node.
+ * @ln: Line number of the opcode.
  */
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {

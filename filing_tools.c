@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * open_file - file opener
- * @file_name: the namepath of the file
- * Return: returns void
+ * open_file -this Fuction file opener
+ * @file_name: The namepath of the file
+ * Return: void
  */
 
 void open_file(char *file_name)
@@ -19,7 +19,7 @@ void open_file(char *file_name)
 
 
 /**
- * read_file - reads a file
+ * read_file -this Fuction reads a file
  * @fd: pointer to file descriptor
  * Return: void
  */
@@ -40,11 +40,11 @@ void read_file(FILE *fd)
 
 
 /**
- * parse_line - Separates each line into tokens to determine
+ * parse_line -This Fuction Separates each line into tokens to determine
  * which function to call
- * @buffer: lines from the file
- * @line_number: the line number
- * @storage_format:  storage storage_format.
+ * @buffer: Lines from the file
+ * @line_number: The line number
+ * @storage_format: Storage storage_format.
  * 0 Nodes will be entered as a stack.
  * 1 nodes will be entered as a queue.
  * Return: Returns 0 when opcode is stack. 1 when queue.
@@ -73,13 +73,13 @@ int parse_line(char *buffer, int line_number, int storage_format)
 }
 
 /**
- * find_func - finds the function opcode
+ * find_func -this Fuction finds the function opcode
  * @opcode: instruction
- * @value: argument of opcode
- * @storage_format:  storage storage_format.
+ * @value: Argument of opcode
+ * @storage_format: Storage storage_format.
  * If 0 Nodes will be entered as a stack.
  * @ln: line number if 1 nodes will be entered as a queue.
- * Return: returns void.
+ * Return: void.
  */
 void find_func(char *opcode, char *value, int ln, int storage_format)
 {
@@ -123,11 +123,11 @@ void find_func(char *opcode, char *value, int ln, int storage_format)
 
 
 /**
- * call_fun - Calls the required function.
- * @func: Pointer to the function that is about to be called.
- * @op: string representing the opcode.
- * @val: string representing a numeric value.
- * @ln: line number for the instruction.
+ * call_fun -this Funtion calls the required function.
+ * @func: pointer to the function that is about to be called.
+ * @op: String representing the opcode.
+ * @val: String representing a numeric value.
+ * @ln: Line number for the instruction.
  * @storage_format: Format specifier.
  */
 void call_fun(op_func func, char *op, char *val, int ln, int storage_format)

@@ -1,16 +1,15 @@
 #include "monty.h"
-
 /**
- * err - Error code printer based on error code.
- * @error_code: the error code cases are as follows:
+ * err -this Fuction Error code printer based on error code.
+ * @error_code: error code cases are as follows:
  * (Code 1) - No file provided or more than 1 file provided.
- * (Code 2) - File Unreadble/Cant open.
- * (Code 3) - Invaid Instructions in file.
- * (Code 4) - Program unable to malloc more memory.
+ * (Code 2) - file Unreadble/Cant open.
+ * (Code 3) - invaid Instructions in file.
+ * (Code 4) - program unable to malloc more memory.
  * (Code 5) - "push" parameter not int
- * (Code 6) - pit stack empty.
- * (Code 7) - pop stack empty.
- * (Code 8) - Stack too short for operation.
+ * (Code 6) - Pit stack empty.
+ * (Code 7) - Pop stack empty.
+ * (Code 8) - stack too short for operation.
  */
 void err(int error_code, ...)
 {
@@ -47,9 +46,9 @@ void err(int error_code, ...)
 }
 
 /**
- * more_err - number error handling.
- * @error_code: the error code cases are as follows
- * (Code 9) - stack has been Divided by zero.
+ * more_err -this Fuction  number error handling.
+ * @error_code: The error code cases are as follows
+ * (Code 9) - Stack has been Divided by zero.
  */
 void more_err(int error_code, ...)
 {
@@ -85,10 +84,10 @@ void more_err(int error_code, ...)
 }
 
 /**
- * string_err - String error handling.
- * @error_code: the error code cases are as follows
- * (Code 10) ~> node number out of ASCII bounds.
- * (Code 11) ~> empty stack.
+ * string_err -this Fuction String error handling.
+ * @error_code: The error code cases are as follows
+ * (Code 10) ~> Node number out of ASCII bounds.
+ * (Code 11) ~> Empty stack.
  */
 void string_err(int error_code, ...)
 {
